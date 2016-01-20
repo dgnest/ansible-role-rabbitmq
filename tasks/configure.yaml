@@ -1,0 +1,10 @@
+---
+
+- name: add rabbitmq vhost
+  sudo: yes
+  rabbitmq_vhost: >
+    name={{ rabbitmq_vhost }}
+    node=rabbit
+    tracing=no
+    state=present
+  register: rabbitmq_vhost
