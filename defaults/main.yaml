@@ -1,8 +1,8 @@
 ---
-# defaults file for php
+# defaults file for rabbitmq
 
-rabbitmq_user: rabbitmq
-rabbitmq_password: rabbitmq
+rabbitmq_user: test_rabbitmq
+rabbitmq_password: _test_rabbitmq
 rabbitmq_vhost: myvhost
 rabbitmq_configure_priv: .*
 rabbitmq_read_priv: .*
