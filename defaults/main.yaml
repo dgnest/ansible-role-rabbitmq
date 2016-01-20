@@ -1,0 +1,10 @@
+---
+# defaults file for php
+
+rabbitmq_user: rabbitmq
+rabbitmq_password: rabbitmq
+rabbitmq_vhost: myvhost
+rabbitmq_configure_priv: .*
+rabbitmq_read_priv: .*
+rabbitmq_write_priv: .*
+rabbitmq_state: present
