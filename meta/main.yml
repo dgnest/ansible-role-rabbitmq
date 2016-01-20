@@ -3,7 +3,7 @@ galaxy_info:
   author: Luis Mayta
   description: Ansible role to install dgnest
   company: DgNest
-  version: 0.0.1
+  version: 0.0.2
   license: "Mit"
   min_ansible_version: 1.4
   platforms:
