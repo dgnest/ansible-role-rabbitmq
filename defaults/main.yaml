@@ -8,3 +8,4 @@ rabbitmq_configure_priv: .*
 rabbitmq_read_priv: .*
 rabbitmq_write_priv: .*
 rabbitmq_state: present
+rabbitmq_port: 5672
