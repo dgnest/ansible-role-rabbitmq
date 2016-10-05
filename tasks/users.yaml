@@ -5,8 +5,8 @@
   rabbitmq_user: >
     user="{{ rabbitmq_user }}"
     password="{{ rabbitmq_password }}"
-    vhost="{{ rabbitmq_vhost }}"
     configure_priv="{{ rabbitmq_configure_priv }}"
     read_priv="{{ rabbitmq_read_priv }}"
     write_priv="{{ rabbitmq_write_priv }}"
     state="{{ rabbitmq_state }}"
+    vhost="{{ rabbitmq_vhost | default('/') }}"

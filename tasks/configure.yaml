@@ -1,10 +1,7 @@
 ---
 
+- name: Ensure RabbitMQ is running
+  service: name=rabbitmq-server state=started
+
 - name: add rabbitmq vhost
-  sudo: yes
-  rabbitmq_vhost: >
-    name={{ rabbitmq_vhost }}
-    node=rabbit
-    tracing=no
-    state=present
-  register: rabbitmq_vhost
+  rabbitmq_vhost: name="{{rabbitmq_vhost}}"
