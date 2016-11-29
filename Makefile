@@ -24,62 +24,62 @@ WATCH = $(shell) $(SCRIPT_DIR)/watch.sh
 
 
 ansible_provision:
-  $(ANSIBLE_PROVISION)
+	$(ANSIBLE_PROVISION)
 
 
 ansible_deploy:
-  $(ANSIBLE_DEPLOY)
+	$(ANSIBLE_DEPLOY)
 
 
 clean:
-  $(CLEAN)
+	$(CLEAN)
 
 
 deploy:
-  $(ANSIBLE_PROVISION)
-  $(ANSIBLE_DEPLOY)
+	$(ANSIBLE_PROVISION)
+	$(ANSIBLE_DEPLOY)
 
 
 distclean: clean
-  rm -rf $(ROOT_DIR)/lib
-  rm -rf $(ROOT_DIR)/*.egg-info
-  rm -rf $(ROOT_DIR)/demo/*.egg-info
+	rm -rf $(ROOT_DIR)/lib
+	rm -rf $(ROOT_DIR)/*.egg-info
+	rm -rf $(ROOT_DIR)/demo/*.egg-info
 
 
 environment:
-  $(PYENV)
-  $(GVM)
-  $(INSTALL)
+	$(PYENV)
+	$(GVM)
+	$(INSTALL)
 
 
 grip:
-  $(GRIP)
+	$(GRIP)
 
 
 install:
-  $(INSTALL)
+	$(INSTALL)
 
 
 roles:
-  $(ROLES_ANSIBLE)
+	$(ROLES_ANSIBLE)
 
 
 maintainer-clean: distclean
-  rm -rf $(BIN_DIR)
-  rm -rf $(ROOT_DIR)/lib/
+	rm -rf $(BIN_DIR)
+	rm -rf $(ROOT_DIR)/lib/
 
 
 lintcode:
-    $(LINTCODE)
+	$(LINTCODE)
 
 
 sync:
-    $(SYNC)
+	$(SYNC)
 
 
 watch:
-    $(WATCH)
+	$(WATCH)
 
 
 test:
-    $(TEST)
+	$(TEST)
