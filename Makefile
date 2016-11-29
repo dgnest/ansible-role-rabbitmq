@@ -1,4 +1,4 @@
-# Makefile for Koica.
+# Makefile for ansible-role-rabbitmq.
 
 # Configuration.
 SHELL = /bin/bash
@@ -12,21 +12,15 @@ WGET = wget
 # Bin scripts
 ANSIBLE_PROVISION = $(shell) $(SCRIPT_DIR)/provision.sh
 ANSIBLE_DEPLOY = $(shell) $(SCRIPT_DIR)/deploy.sh
-BEHAVE = $(shell) $(SCRIPT_DIR)/behave.sh
 CLEAN = $(shell) $(SCRIPT_DIR)/clean.sh
 GVM = $(shell) $(SCRIPT_DIR)/gvm.sh
+GRIP = $(shell) $(SCRIPT_DIR)/grip.sh
 PYENV = $(shell) $(SCRIPT_DIR)/pyenv.sh
 INSTALL = $(shell) $(SCRIPT_DIR)/install.sh
+LINTCODE = $(shell) $(SCRIPT_DIR)/lintcode.sh
 TEST = $(shell) $(SCRIPT_DIR)/test.sh
 SYNC = $(shell) $(SCRIPT_DIR)/sync.sh
 WATCH = $(shell) $(SCRIPT_DIR)/watch.sh
-
-install:
-	$(INSTALL)
-
-
-roles:
-	$(ROLES_ANSIBLE)
 
 
 ansible_provision:
@@ -55,11 +49,28 @@ distclean: clean
 environment:
 	$(PYENV)
 	$(GVM)
+	$(INSTALL)
+
+
+grip:
+	$(GRIP)
+
+
+install:
+	$(INSTALL)
+
+
+roles:
+	$(ROLES_ANSIBLE)
 
 
 maintainer-clean: distclean
 	rm -rf $(BIN_DIR)
 	rm -rf $(ROOT_DIR)/lib/
+
+
+lintcode:
+	$(LINTCODE)
 
 
 sync:
@@ -68,3 +79,7 @@ sync:
 
 watch:
 	$(WATCH)
+
+
+test:
+	$(TEST)
