@@ -1,5 +1,5 @@
 ---
 
 - name: restart rabbitmq
-  sudo: yes
-  service: name=rabbitmq-server state=restarted enabled=yes
+  became: true
+  service: name=rabbitmq-server state=restarted enabled=true

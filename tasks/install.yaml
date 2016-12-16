@@ -1,8 +1,8 @@
 ---
 
 - name: Install RabbitMQ Server
-  apt: pkg=rabbitmq-server state=latest
-  sudo: yes
+  apt: pkg=rabbitmq-server state=present
+  became: true
   register: install_rabbitmq
   notify:
     - restart rabbitmq
