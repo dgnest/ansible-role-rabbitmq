@@ -1,5 +1,5 @@
 ---
 
 - name: restart rabbitmq
-  became: true
+  become: true
   service: name=rabbitmq-server state=restarted enabled=true
