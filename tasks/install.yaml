@@ -2,7 +2,7 @@
 
 - name: Install RabbitMQ Server
   apt: pkg=rabbitmq-server state=present
-  became: true
+  become: true
   register: install_rabbitmq
   notify:
     - restart rabbitmq
